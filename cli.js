@@ -21,6 +21,11 @@ if (command === "list") {
 }
 
 function runListCommand() {
-  // Replace this with your implementation
+  members.forEach((member) => {
+    for(const property in member) {
+      console.log(`${property}: ${member[property]}`)
+    }
+    console.log(" ")
+  })
   console.log("Called the list command");
 }
